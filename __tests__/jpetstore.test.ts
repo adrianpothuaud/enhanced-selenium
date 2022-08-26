@@ -1,4 +1,8 @@
+import * as dotenv from 'dotenv'
+
 import { getFirefoxDriver, getRemoteChromeDriver, IEnhancedDriver } from '../src'
+
+dotenv.config()
 
 /**
  * @group samples
