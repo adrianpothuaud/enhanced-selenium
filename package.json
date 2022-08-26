@@ -1,6 +1,6 @@
 {
   "name": "enhanced-selenium",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Enhanced Selenium library. Provides an easier and quicker way of writing end to end web tests. Focus on your tests and not on your own test framework.",
   "keywords": [
     "Selenium",
