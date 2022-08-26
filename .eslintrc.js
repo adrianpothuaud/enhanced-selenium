@@ -7,6 +7,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended'
   ],
+  ignorePatterns: ['dist/**'],
   'overrides': [
   ],
   'parser': '@typescript-eslint/parser',
@@ -35,5 +36,5 @@ module.exports = {
     semi: ['error', 'never'],
     'sort-keys': 'error',
     'sort-vars': 'error'
-  }
+  },
 }

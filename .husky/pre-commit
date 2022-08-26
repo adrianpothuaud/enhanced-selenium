@@ -3,4 +3,6 @@
 
 npm run lint
 npm run doc
+npm run build
 git add docs
+git add dist
