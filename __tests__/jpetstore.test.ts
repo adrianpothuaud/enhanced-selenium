@@ -7,7 +7,7 @@ describe('Sign In', () => {
   let driver: IEnhancedDriver
 
   beforeAll(async () => {
-    driver = await getFirefoxDriver(true)
+    driver = await getFirefoxDriver()
   }, 10000)
 
   afterAll(async () => {
