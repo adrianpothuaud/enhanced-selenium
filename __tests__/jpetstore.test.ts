@@ -1,4 +1,4 @@
-import { getFirefoxDriver, IEnhancedDriver } from '../src'
+import { getFirefoxDriver, getRemoteChromeDriver, IEnhancedDriver } from '../src'
 
 /**
  * @group samples
@@ -7,7 +7,8 @@ describe('Sign In', () => {
   let driver: IEnhancedDriver
 
   beforeAll(async () => {
-    driver = await getFirefoxDriver()
+    if (JSON.parse(process.env.CI)) driver = await getRemoteChromeDriver(process.env.SELENIUM_HUB_HOST)
+    else driver =  await getFirefoxDriver()
   }, 10000)
 
   afterAll(async () => {

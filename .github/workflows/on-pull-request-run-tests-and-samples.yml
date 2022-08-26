@@ -1,8 +1,15 @@
+# ref to https://www.testmo.com/guides/github-actions-selenium
+# must setup selenium services for github action ton success
 on:
   pull_request
 jobs:
   Tests:
     runs-on: ubuntu-latest
+    container:
+      image: node:16
+    services:
+      selenium:
+        image: selenium/standalone-chrome
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -14,3 +21,5 @@ jobs:
         run: npm run test:lib
       - name: Run Jest (samples)
         run: npm run test:samples
+        env:
+          SELENIUM_HUB_HOST: selenium
