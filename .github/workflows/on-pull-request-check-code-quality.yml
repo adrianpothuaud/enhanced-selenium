@@ -1,0 +1,14 @@
+on:
+  pull_request
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install
+        run: npm i
+      - name: Run ESLint
+        run: npm run lint
