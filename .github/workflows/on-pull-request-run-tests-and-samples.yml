@@ -5,6 +5,7 @@ on:
 jobs:
   Tests:
     runs-on: ubuntu-latest
+    container: thompsnm/nodejs-chrome
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
