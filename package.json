@@ -19,7 +19,7 @@
     "doc": "typedoc",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "manager:start": "webdriver-manager start --detach",
+    "manager:start": "webdriver-manager start --detach &",
     "manager:stop": "webdriver-manager shutdown",
     "jest": "jest",
     "sleep": "sleepms 8000",
