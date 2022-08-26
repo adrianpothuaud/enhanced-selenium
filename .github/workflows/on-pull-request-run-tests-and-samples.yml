@@ -20,6 +20,7 @@ jobs:
       - name: Prepare Selenium standalone
         run: |
           npm i -g webdriver-manager
+          webdriver-manager update
           webdriver-manager start --detach
       - name: Run Jest (samples)
         run: CI=true SELENIUM_HUB_HOST=localhost npm run test:samples
