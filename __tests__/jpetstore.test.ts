@@ -1,8 +1,5 @@
-import * as dotenv from 'dotenv'
-
 import { getFirefoxDriver, getRemoteChromeDriver, IEnhancedDriver } from '../src'
-
-dotenv.config()
+import { env } from '../src/env'
 
 /**
  * @group samples
@@ -11,7 +8,7 @@ describe('Sign In', () => {
   let driver: IEnhancedDriver
 
   beforeAll(async () => {
-    if (JSON.parse(process.env.CI)) driver = await getRemoteChromeDriver(process.env.SELENIUM_HUB_HOST)
+    if (JSON.parse(env.isCI)) driver = await getRemoteChromeDriver(env.seleniumHubHost)
     else driver =  await getFirefoxDriver()
   }, 10000)
 
