@@ -19,6 +19,8 @@
     "doc": "typedoc",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
+    "test:lib": "jest --group=lib",
+    "test:samples": "jest --group=samples",
     "release": "standard-version"
   },
   "dependencies": {
@@ -39,7 +41,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.8.7",
     "husky": "^8.0.1",
-    "jest": "^29.0.1",
+    "jest": "^29.0.0",
     "jest-runner-groups": "^2.2.0",
     "jsdoc": "^3.6.11",
     "standard-version": "^9.5.0",

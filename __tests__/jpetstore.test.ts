@@ -1,6 +1,8 @@
-import { getFirefoxDriver } from '../src'
-import { IEnhancedDriver } from '../src/interfaces'
+import { getFirefoxDriver, IEnhancedDriver } from '../src'
 
+/**
+ * @group samples
+ */
 describe('Sign In', () => {
   let driver: IEnhancedDriver
 
