@@ -11,6 +11,7 @@ export async function getChromeDriver(debug = true) {
     : new ChromeOptions()
       .headless()
       .addArguments(
+        '--headless',
         '--disable-dev-shm-usage',
         '--no-sandbox',
         '--disable-gpu',
