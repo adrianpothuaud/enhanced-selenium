@@ -18,7 +18,4 @@ jobs:
       - name: Run Jest (lib tests)
         run: npm run test:lib
       - name: Run Jest (samples)
-        run: npm run test:samples
-        env:
-          CI: true
-          SELENIUM_HUB_HOST: selenium
+        run: CI=true SELENIUM_HUB_HOST=selenium npm run test:samples
