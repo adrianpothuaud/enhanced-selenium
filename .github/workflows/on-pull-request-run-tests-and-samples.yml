@@ -5,9 +5,6 @@ on:
 jobs:
   Tests:
     runs-on: ubuntu-latest
-    services:
-      selenium:
-        image: selenium/standalone-chrome
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -15,17 +12,8 @@ jobs:
           node-version: '16.17.0'
       - name: Install
         run: npm ci
-      - name: Run Jest (lib tests)
-        run: npm run test:lib
-      - name: Prepare Selenium standalone
-        run: |
-          npm i -g webdriver-manager
-          webdriver-manager update
-          webdriver-manager start --detach
-      - name: Run Jest (samples)
-        run: CI=true SELENIUM_HUB_HOST=localhost npm run test:samples
-      - name: Stop webdriver manager
-        run: webdriver-manager shutdown
+      - name: Run Jest
+        run: npm run test
       - name: Report code coverage
         uses: zgosalvez/github-actions-report-lcov@v1
         with:

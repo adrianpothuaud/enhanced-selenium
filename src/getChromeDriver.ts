@@ -10,6 +10,12 @@ export async function getChromeDriver(debug = true) {
     ? new ChromeOptions()
     : new ChromeOptions()
       .headless()
+      .addArguments(
+        '--headless',
+        '--no-sandbox',
+        '--disable-gpu',
+        '--window-size=1980,1200'
+      )
   const driver = await new Builder()
     .forBrowser('chrome')
     .setChromeOptions(options)

@@ -19,6 +19,7 @@
     "doc": "typedoc",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
+    "test": "jest",
     "test:lib": "jest --group=lib",
     "test:samples": "jest --group=samples",
     "release": "standard-version"

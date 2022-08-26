@@ -1,5 +1,6 @@
-import { getFirefoxDriver, getRemoteChromeDriver, IEnhancedDriver } from '../src'
-import { env } from '../src/env'
+import { getChromeDriver, IEnhancedDriver } from '../src'
+
+jest.setTimeout(30000)
 
 /**
  * @group samples
@@ -8,8 +9,7 @@ describe('Sign In', () => {
   let driver: IEnhancedDriver
 
   beforeAll(async () => {
-    if (JSON.parse(env.isCI)) driver = await getRemoteChromeDriver(env.seleniumHubHost)
-    else driver =  await getFirefoxDriver()
+    driver = await getChromeDriver()
   }, 10000)
 
   afterAll(async () => {
