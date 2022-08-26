@@ -4,7 +4,6 @@ on:
       - main
 jobs:
   Deploy-GitHub-Pages-Documentation:
-    needs: Build-Documentation
     runs-on: ubuntu-latest
     steps:
       - name: Deploy 🚀
