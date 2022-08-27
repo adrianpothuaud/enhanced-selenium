@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+      "editorconfig.editorconfig",
+      "dbaeumer.vscode-eslint",
+      "christian-kohler.npm-intellisense",
+      "wayou.vscode-todo-highlight",
+      "gruntfuggly.todo-tree",
+      "orta.vscode-jest",
+      "firsttris.vscode-jest-runner",
+      "Orta.vscode-jest"
+    ]
+}

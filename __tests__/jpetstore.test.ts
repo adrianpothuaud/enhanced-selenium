@@ -1,4 +1,4 @@
-import { getRemoteChromeDriver, IEnhancedDriver } from '../src'
+import { getRemoteChromeDriver, IEnhancedDriver } from '../dist'
 
 jest.setTimeout(300000)
 

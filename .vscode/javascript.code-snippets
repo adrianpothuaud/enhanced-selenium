@@ -1,0 +1,37 @@
+{
+	// Place your o5r-e2e workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+  "Comments for test": {
+    "scope": "javascript",
+    "prefix": "comment",
+    "body": [
+      "// (1)---------------setup",
+      "// # 🌱 Beginning of the times, there were nothing at all",
+      "// (2)--------------action",
+      "// # 💍 The proposal...",
+      "// (3)---------------tests",
+      "// # 🕵️ Finished works inspector comes in!",
+      "// 🎉 🎉 🎉 🎉 🎉 ",
+    ]
+  },
+  "Jest new it block": {
+    "scope": "javascript",
+    "prefix": "it",
+    "body": [
+      "it('$1', async () => {",
+      "  // (1)---------------setup",
+      "  // # 🌱 Beginning of the times, there were nothing at all",
+      "  // (2)--------------action",
+      "  // # 💍 The proposal...",
+      "  // (3)---------------tests",
+      "  // # 🕵️ Finished works inspector comes in!",
+      "  // 🎉 🎉 🎉 🎉 🎉 ",
+      "}, $2)",
+    ]
+  }
+}

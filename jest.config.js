@@ -9,7 +9,7 @@ module.exports = {
     '!**/node_modules/**',
     '!__tests__/**',
   ],
-  coverageReporters: ['lcov'],
+  coverageReporters: ['lcov', 'text'],
   preset: 'ts-jest',
   runner: 'groups',
   testEnvironment: 'node',
