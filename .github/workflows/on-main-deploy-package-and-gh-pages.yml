@@ -19,6 +19,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - uses: c-hive/gha-npm-cache@v1
+      - run: npm i
+      - run: git config --global user.email "$GITHUB_ACTOR@protonmail.com" && git config --global user.name "$GITHUB_ACTOR"
+      - run: npm publish
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
@@ -28,3 +32,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+    env:
+     NODE_AUTH_TOKEN: ${{secrets.GH_ACCESS_TOKEN}}
