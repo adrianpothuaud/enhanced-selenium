@@ -10,6 +10,6 @@ jobs:
           node-version: '16.17.0'
       - uses: c-hive/gha-npm-cache@v1
       - name: Install
-        run: npm ci
+        run: npm i
       - name: Run ESLint
         run: npm run lint

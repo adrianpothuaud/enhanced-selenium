@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+rm -rf node_modules package-lock.json
+npm i
 npm run lint
 npm run doc
 npm run build
