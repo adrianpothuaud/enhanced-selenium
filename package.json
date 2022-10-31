@@ -44,7 +44,7 @@
     "selenium-webdriver": "^4.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
+    "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.0.3",
     "@types/jest": "^28.1.8",
     "@types/node": "^18.7.13",
